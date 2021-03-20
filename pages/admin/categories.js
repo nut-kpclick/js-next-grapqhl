@@ -34,7 +34,7 @@ const Categories = () => {
                     </Select.Option>
                     <Select.Option onClick={() => deleteRef.current.showModal(row)}>
                         Delete
-                </Select.Option>
+                    </Select.Option>
                 </Select>
             )
         },
@@ -47,7 +47,7 @@ const Categories = () => {
                 <Col xs={6}><Input.Search enterButton placeholder="Search Categories" allowClear /></Col>
                 <Col xs={4}><Button block type="primary" onClick={() => createRef.current.showModal()}>Create</Button></Col>
             </Row>
-            <Table dataSource={data} columns={columns} bordered />
+            <Table dataSource={data} columns={columns} />
             <Create ref={createRef} />
             <Delete ref={deleteRef} />
             <Edit ref={editRef} />
